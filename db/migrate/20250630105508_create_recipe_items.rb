@@ -7,5 +7,6 @@ class CreateRecipeItems < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+    add_index :recipe_items, [:recipe_id, :fertilizer_id], unique: true
   end
 end
